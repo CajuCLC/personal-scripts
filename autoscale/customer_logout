@@ -1,0 +1,30 @@
+[root@mi6-autoscale /]# cat /var/log/cloud-init-output.log [1;2D
+Cloud-init v. 0.7.5 running 'init-local' at Mon, 15 Feb 2016 17:46:40 +0000. Up 35.04 seconds.
+Cloud-init v. 0.7.5 running 'init' at Mon, 15 Feb 2016 17:46:41 +0000. Up 35.70 seconds.
+ci-info: +++++++++++++++++++++++++++Net device info++++++++++++++++++++++++++++
+ci-info: +--------+------+----------------+---------------+-------------------+
+ci-info: | Device |  Up  |    Address     |      Mask     |     Hw-Address    |
+ci-info: +--------+------+----------------+---------------+-------------------+
+ci-info: |  lo:   | True |   127.0.0.1    |   255.0.0.0   |         .         |
+ci-info: | eth1:  | True |  10.176.8.202  | 255.255.192.0 | bc:76:4e:20:7c:ca |
+ci-info: | eth0:  | True | 162.209.127.62 | 255.255.255.0 | bc:76:4e:21:48:09 |
+ci-info: +--------+------+----------------+---------------+-------------------+
+ci-info: +++++++++++++++++++++++++++++++++Route info++++++++++++++++++++++++++++++++++
+ci-info: +-------+---------------+---------------+---------------+-----------+-------+
+ci-info: | Route |  Destination  |    Gateway    |    Genmask    | Interface | Flags |
+ci-info: +-------+---------------+---------------+---------------+-----------+-------+
+ci-info: |   0   |    0.0.0.0    | 162.209.127.1 |    0.0.0.0    |    eth0   |   UG  |
+ci-info: |   1   |   10.176.0.0  |    0.0.0.0    | 255.255.192.0 |    eth1   |   U   |
+ci-info: |   2   |   10.176.0.0  |   10.176.0.1  |  255.240.0.0  |    eth1   |   UG  |
+ci-info: |   3   |   10.208.0.0  |   10.176.0.1  |  255.240.0.0  |    eth1   |   UG  |
+ci-info: |   4   | 162.209.127.0 |    0.0.0.0    | 255.255.255.0 |    eth0   |   U   |
+ci-info: +-------+---------------+---------------+---------------+-----------+-------+
+2016-02-15 17:46:42,520 - util.py[WARNING]: Failed forking and calling callback NoneType
+Cloud-init v. 0.7.5 running 'modules:config' at Mon, 15 Feb 2016 17:46:43 +0000. Up 38.05 seconds.
+Cloud-init v. 0.7.5 running 'modules:final' at Mon, 15 Feb 2016 17:46:44 +0000. Up 38.88 seconds.
+Cloud-init v. 0.7.5 finished at Mon, 15 Feb 2016 17:46:44 +0000. Datasource DataSourceNone.  Up 39.06 seconds
+2016-02-15 17:46:44,954 - cc_final_message.py[WARNING]: Used fallback datasource
+cat: [1: Arquivo ou diretório não encontrado
+-bash: 2D: comando não encontrado
+[root@mi6-autoscale /]# 
+
