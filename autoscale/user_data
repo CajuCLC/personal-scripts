@@ -1,0 +1,19 @@
+#!/bin/bash
+yum install -y httpd php vim
+service httpd start
+chkconfig httpd on
+groupadd www
+chown -R root:www /var/www
+chmod 2775 /var/www
+find /var/www -type d -exec chmod 2775 {} +
+find /var/www -type f -exec chmod 0664 {} +
+echo "<?php phpinfo(); ?>" > /var/www/html/phpinfo.php
+oqfalar=$(hostname)
+echo "Este eh o servidor $oqfalar" > /var/www/html/index.php
+iptables -I INPUT 1 -p tcp --dport 80 -m state --state NEW,ESTABLISHED -j ACCEPT
+service iptables save
+
+
+
+THIS IS THE BASE64:
+IyEvYmluL2Jhc2gNCnl1bSBpbnN0YWxsIC15IGh0dHBkIHBocCB2aW0NCnNlcnZpY2UgaHR0cGQgc3RhcnQNCmNoa2NvbmZpZyBodHRwZCBvbg0KZ3JvdXBhZGQgd3d3DQpjaG93biAtUiByb290Ond3dyAvdmFyL3d3dw0KY2htb2QgMjc3NSAvdmFyL3d3dw0KZmluZCAvdmFyL3d3dyAtdHlwZSBkIC1leGVjIGNobW9kIDI3NzUge30gKw0KZmluZCAvdmFyL3d3dyAtdHlwZSBmIC1leGVjIGNobW9kIDA2NjQge30gKw0KZWNobyAiPD9waHAgcGhwaW5mbygpOyA/PiIgPiAvdmFyL3d3dy9odG1sL3BocGluZm8ucGhwDQpvcWZhbGFyPSQoaG9zdG5hbWUpDQplY2hvICJFc3RlIGVoIG8gc2Vydmlkb3IgJG9xZmFsYXIiID4gL3Zhci93d3cvaHRtbC9pbmRleC5waHANCmlwdGFibGVzIC1JIElOUFVUIDEgLXAgdGNwIC0tZHBvcnQgODAgLW0gc3RhdGUgLS1zdGF0ZSBORVcsRVNUQUJMSVNIRUQgLWogQUNDRVBUDQpzZXJ2aWNlIGlwdGFibGVzIHNhdmU=
