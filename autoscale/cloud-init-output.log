@@ -1,0 +1,29 @@
+[root@mosyle-auto-asd2200f14 ~]# cat /var/log/cloud-init-output.log
+Cloud-init v. 0.7.5 running 'init-local' at Tue, 16 Feb 2016 16:50:24 +0000. Up 20.00 seconds.
+Cloud-init v. 0.7.5 running 'init' at Tue, 16 Feb 2016 16:50:24 +0000. Up 20.62 seconds.
+ci-info: ++++++++++++++++++++++++++++Net device info++++++++++++++++++++++++++++
+ci-info: +--------+------+-----------------+---------------+-------------------+
+ci-info: | Device |  Up  |     Address     |      Mask     |     Hw-Address    |
+ci-info: +--------+------+-----------------+---------------+-------------------+
+ci-info: |   lo   | True |    127.0.0.1    |   255.0.0.0   |         .         |
+ci-info: |  eth1  | True |  10.176.136.116 | 255.255.224.0 | bc:76:4e:20:a6:71 |
+ci-info: |  eth0  | True | 162.242.226.244 | 255.255.255.0 | bc:76:4e:20:01:13 |
+ci-info: +--------+------+-----------------+---------------+-------------------+
+ci-info: +++++++++++++++++++++++++++++++++Route info++++++++++++++++++++++++++++++++++
+ci-info: +-------+---------------+---------------+---------------+-----------+-------+
+ci-info: | Route |  Destination  |    Gateway    |    Genmask    | Interface | Flags |
+ci-info: +-------+---------------+---------------+---------------+-----------+-------+
+ci-info: |   0   | 162.242.226.0 |    0.0.0.0    | 255.255.255.0 |    eth0   |   U   |
+ci-info: |   1   |  10.176.128.0 |    0.0.0.0    | 255.255.224.0 |    eth1   |   U   |
+ci-info: |   2   |   10.208.0.0  |  10.176.128.1 |  255.240.0.0  |    eth1   |   UG  |
+ci-info: |   3   |   10.176.0.0  |  10.176.128.1 |  255.240.0.0  |    eth1   |   UG  |
+ci-info: |   4   |    0.0.0.0    | 162.242.226.1 |    0.0.0.0    |    eth0   |   UG  |
+ci-info: +-------+---------------+---------------+---------------+-----------+-------+
+2016-02-16 16:50:25,226 - util.py[WARNING]: Failed forking and calling callback NoneType
+Cloud-init v. 0.7.5 running 'modules:config' at Tue, 16 Feb 2016 16:50:25 +0000. Up 21.56 seconds.
+2016-02-16 16:50:26,067 - util.py[WARNING]: Failed to run debconf-set-selections for grub-dpkg
+2016-02-16 16:50:26,075 - util.py[WARNING]: Running apt-configure (<module 'cloudinit.config.cc_apt_configure' from '/usr/lib/python2.6/site-packages/cloudinit/config/cc_apt_configure.pyc'>) failed
+Cloud-init v. 0.7.5 running 'modules:final' at Tue, 16 Feb 2016 16:50:26 +0000. Up 22.31 seconds.
+ci-info: no authorized ssh keys fingerprints found for user centos.
+Cloud-init v. 0.7.5 finished at Tue, 16 Feb 2016 16:50:26 +0000. Datasource DataSourceNone.  Up 22.50 seconds
+2016-02-16 16:50:26,666 - cc_final_message.py[WARNING]: Used fallback datasource
