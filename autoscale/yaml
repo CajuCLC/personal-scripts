@@ -1,0 +1,12 @@
+type    : agent.cpu
+label   : CPU
+period  : 60
+timeout : 10
+alarms  :
+    cpu-usage:
+        label: CPU usage
+        notification_plan_id: ntlYzQveAr
+        criteria: |
+            if (metric['usage_average'] > 70) {
+                return new AlarmStatus(CRITICAL);
+            }
