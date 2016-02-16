@@ -1,0 +1,65 @@
+{
+    "group": {
+        "links": [
+            {
+                "href": "https://iad.autoscale.api.rackspacecloud.com/v1.0/849341/groups/019244eb-d3a4-47c1-b578-20a092644166/", 
+                "rel": "self"
+            }
+        ], 
+        "state": {
+            "status": "ACTIVE", 
+            "desiredCapacity": 0, 
+            "paused": false, 
+            "active": [], 
+            "pendingCapacity": 0, 
+            "activeCapacity": 0, 
+            "name": "mosyle-auto"
+        }, 
+        "scalingPolicies_links": [
+            {
+                "href": "https://iad.autoscale.api.rackspacecloud.com/v1.0/849341/groups/019244eb-d3a4-47c1-b578-20a092644166/policies/", 
+                "rel": "policies"
+            }
+        ], 
+        "scalingPolicies": [
+            {
+                "desiredCapacity": 3, 
+                "links": [
+                    {
+                        "href": "https://iad.autoscale.api.rackspacecloud.com/v1.0/849341/groups/019244eb-d3a4-47c1-b578-20a092644166/policies/b46bae13-79bc-40e1-bbd2-362c4a1b45d0/", 
+                        "rel": "self"
+                    }
+                ], 
+                "cooldown": 120, 
+                "type": "webhook", 
+                "id": "b46bae13-79bc-40e1-bbd2-362c4a1b45d0", 
+                "name": "web_up"
+            }
+        ], 
+        "launchConfiguration": {
+            "args": {
+                "loadBalancers": [
+                    {
+                        "port": 80, 
+                        "loadBalancerId": 141573
+                    }
+                ], 
+                "server": {
+                    "flavorRef": "general1-1", 
+                    "name": "mosyle-auto", 
+                    "imageRef": "fabe045f-43f8-4991-9e6c-5cabd617538c", 
+                    "user_data": "IyEvYmluL2Jhc2gNCnl1bSBpbnN0YWxsIC15IGh0dHBkIHBocCB2aW0NCnNlcnZpY2UgaHR0cGQgc3RhcnQNCmNoa2NvbmZpZyBodHRwZCBvbg0KZ3JvdXBhZGQgd3d3DQpjaG93biAtUiByb290Ond3dyAvdmFyL3d3dw0KY2htb2QgMjc3NSAvdmFyL3d3dw0KZmluZCAvdmFyL3d3dyAtdHlwZSBkIC1leGVjIGNobW9kIDI3NzUge30gKw0KZmluZCAvdmFyL3d3dyAtdHlwZSBmIC1leGVjIGNobW9kIDA2NjQge30gKw0KZWNobyAiPD9waHAgcGhwaW5mbygpOyA/PiIgPiAvdmFyL3d3dy9odG1sL3BocGluZm8ucGhwDQpvcWZhbGFyPSQoaG9zdG5hbWUpDQplY2hvICJFc3RlIGVoIG8gc2Vydmlkb3IgJG9xZmFsYXIiID4gL3Zhci93d3cvaHRtbC9pbmRleC5waHANCmlwdGFibGVzIC1JIElOUFVUIDEgLXAgdGNwIC0tZHBvcnQgODAgLW0gc3RhdGUgLS1zdGF0ZSBORVcsRVNUQUJMSVNIRUQgLWogQUNDRVBUDQpzZXJ2aWNlIGlwdGFibGVzIHNhdmU="
+                }
+            }, 
+            "type": "launch_server"
+        }, 
+        "groupConfiguration": {
+            "maxEntities": 10, 
+            "cooldown": 120, 
+            "name": "mosyle-auto", 
+            "minEntities": 1, 
+            "metadata": {}
+        }, 
+        "id": "019244eb-d3a4-47c1-b578-20a092644166"
+    }
+}
