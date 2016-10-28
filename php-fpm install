@@ -30,7 +30,7 @@ EOF
 service php-fpm restart ; service httpd restart
 chkconfig php-fpm on
 
-
+cd /var/www/html/
 cat << EOF > phpinfo.php
 <?php
 phpinfo();
